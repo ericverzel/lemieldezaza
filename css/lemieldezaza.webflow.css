@@ -52,6 +52,27 @@
   background-color: #000;
 }
 
+.button.price-btn {
+  position: absolute;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  display: none;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.button.price-btn:hover {
+  color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
+}
+
 .div-block-2 {
   display: block;
   width: 368px;
@@ -84,8 +105,8 @@
 .section-2 {
   position: relative;
   z-index: 4;
-  padding-top: 65px;
-  padding-bottom: 100px;
+  padding-top: 125px;
+  padding-bottom: 125px;
   background-color: #fff;
 }
 
@@ -98,7 +119,7 @@
 }
 
 .column-2 {
-  padding-top: 37px;
+  padding-top: 20px;
   padding-left: 0px;
 }
 
@@ -153,6 +174,7 @@
 
 .heading-2 {
   margin-top: 0px;
+  margin-bottom: 20px;
   padding-bottom: 9px;
   font-family: Lato, sans-serif;
   color: #fff;
@@ -163,7 +185,7 @@
 }
 
 .paragraph-2 {
-  padding-top: 24px;
+  padding-top: 0px;
   padding-right: 76px;
   font-family: Lato, sans-serif;
   color: #fff;
@@ -453,7 +475,7 @@
   height: 2px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #fff;
+  background-color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
 }
 
 .text-block-3 {
@@ -497,7 +519,7 @@
   height: 2px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #fff;
+  background-color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
 }
 
 .nav-menu {
@@ -528,7 +550,7 @@
   height: 2px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #fff;
+  background-color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
 }
 
 .link-block {
@@ -570,7 +592,7 @@
 
 .artist-name {
   color: #fff;
-  font-size: 24px;
+  font-size: 15px;
   font-weight: 100;
   text-align: center;
 }
@@ -591,7 +613,7 @@
   margin-bottom: 60px;
 }
 
-.background-video {
+.video {
   position: relative;
   left: 0%;
   top: 0%;
@@ -618,6 +640,7 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  background-color: #000;
 }
 
 .intro-container {
@@ -663,13 +686,15 @@
 }
 
 .preloader {
-  position: absolute;
+  position: fixed;
   left: 0%;
   top: 0%;
   right: 0%;
   bottom: 0%;
   z-index: 100000;
   display: none;
+  width: 100vw;
+  height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -683,7 +708,11 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .85)), to(rgba(0, 0, 0, .85))), url('../images/miel-pattern.svg');
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, .85)), url('../images/miel-pattern.svg');
+  background-position: 0px 0px, 0px 0px;
+  background-size: auto, 125px;
 }
 
 .bottom-image {
@@ -698,19 +727,19 @@
   padding: 15px 25px;
   border-radius: 5px;
   background-color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
-  background-image: url('../images/miel-pattern.svg');
-  background-position: 50% 50%;
-  background-size: contain;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(46.666666666666664, 95.58%, 55.69%, 0.69)), to(hsla(46.666666666666664, 95.58%, 55.69%, 0.69))), url('../images/miel-pattern.svg');
+  background-image: linear-gradient(180deg, hsla(46.666666666666664, 95.58%, 55.69%, 0.69), hsla(46.666666666666664, 95.58%, 55.69%, 0.69)), url('../images/miel-pattern.svg');
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, contain;
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
-  font-weight: 500;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, .5);
+  font-weight: 700;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, .2);
 }
 
 .btn:hover {
   background-color: #000;
   color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
-  font-weight: 500;
 }
 
 .btn.full {
@@ -719,18 +748,36 @@
 
 .btn.buy-btn {
   padding-left: 47px;
-  background-image: url('../images/Shape.svg'), url('../images/miel-pattern.svg');
-  background-position: 6% 50%, 50% 50%;
-  background-size: 25px, contain;
+  background-image: url('../images/Shape.svg'), -webkit-gradient(linear, left top, left bottom, from(hsla(46.666666666666664, 95.58%, 55.69%, 0.67)), to(hsla(46.666666666666664, 95.58%, 55.69%, 0.67))), url('../images/miel-pattern.svg');
+  background-image: url('../images/Shape.svg'), linear-gradient(180deg, hsla(46.666666666666664, 95.58%, 55.69%, 0.67), hsla(46.666666666666664, 95.58%, 55.69%, 0.67)), url('../images/miel-pattern.svg');
+  background-position: 6% 50%, 0px 0px, 50% 50%;
+  background-size: 25px, auto, contain;
+  background-repeat: no-repeat, repeat, repeat;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, .22);
+}
+
+.btn.buy-btn:hover {
+  background-color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
+  background-image: url('../images/Shape.svg'), -webkit-gradient(linear, left top, left bottom, from(hsla(46.666666666666664, 95.58%, 55.69%, 0.67)), to(hsla(46.666666666666664, 95.58%, 55.69%, 0.67)));
+  background-image: url('../images/Shape.svg'), linear-gradient(180deg, hsla(46.666666666666664, 95.58%, 55.69%, 0.67), hsla(46.666666666666664, 95.58%, 55.69%, 0.67));
+  background-position: 6% 50%, 0px 0px;
+  background-size: 25px, auto;
   background-repeat: no-repeat, repeat;
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, .11);
+}
+
+.btn.buy-btn.no-icon {
+  padding-right: 25px;
+  padding-left: 25px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(hsla(46.666666666666664, 95.58%, 55.69%, 0.67)), to(hsla(46.666666666666664, 95.58%, 55.69%, 0.67))), url('../images/miel-pattern.svg');
+  background-image: linear-gradient(180deg, hsla(46.666666666666664, 95.58%, 55.69%, 0.67), hsla(46.666666666666664, 95.58%, 55.69%, 0.67)), url('../images/miel-pattern.svg');
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, contain;
+  background-repeat: repeat, repeat;
 }
 
 .div-block-8 {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -740,8 +787,6 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .5)));
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
 }
 
 .div-block-9 {
@@ -753,15 +798,17 @@
   margin-left: auto;
   border-radius: 6px;
   background-image: url('../images/bee3.jpeg');
-  background-position: 50% 50%;
+  background-position: 0% 0%;
   background-size: cover;
   box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, .15);
 }
 
 .div-block-9.jarbg {
+  position: relative;
+  width: 84%;
   background-image: url('../images/jor-zaza.jpg');
-  background-position: 50% 66%;
-  background-size: 800px;
+  background-position: 50% 50%;
+  background-size: 112%;
 }
 
 .price {
@@ -775,6 +822,69 @@
   display: none;
 }
 
+.zaza {
+  width: 130px;
+  height: 130px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
+  border-radius: 100%;
+  background-image: url('../images/Webclip.png'), url('../images/zaaaa.jpg');
+  background-position: 77% 37%, 0% 50%;
+  background-size: 40px, cover;
+  background-repeat: no-repeat, repeat;
+}
+
+.zaza-job {
+  color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
+  font-weight: 100;
+  text-align: left;
+}
+
+.zaza-signature {
+  margin-top: 20px;
+  margin-right: 30%;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  opacity: 0.9;
+  -webkit-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+
+.zaza-pic {
+  margin-bottom: 20px;
+}
+
+.price-tag {
+  display: block;
+  width: 78px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 20px;
+  border-radius: 0px 0px 5px 5px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
+  background-image: linear-gradient(180deg, #000, #000);
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .05);
+  color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
+  font-weight: 700;
+  text-align: center;
+}
+
+.container-2 {
+  margin-top: 60px;
+}
+
+.background-video {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .5)));
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
+}
+
 @media (max-width: 991px) {
   .section {
     background-image: none;
@@ -783,6 +893,9 @@
     width: 424px;
     margin-left: -16px;
     padding-top: 456px;
+  }
+  .button.price-btn {
+    display: block;
   }
   .div-block-2 {
     margin-left: 0px;
@@ -871,7 +984,7 @@
     padding-top: 5%;
     padding-bottom: 5%;
   }
-  .background-video {
+  .video {
     display: block;
     padding-top: 20%;
   }
@@ -880,6 +993,24 @@
   }
   .btn:hover {
     font-weight: 700;
+  }
+  .btn.buy-btn {
+    display: none;
+  }
+  .div-block-9.jarbg {
+    background-position: 50% 50%;
+    background-size: 90%;
+  }
+  .zaza-signature {
+    margin-right: 25%;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+  .background-video {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .5)));
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
   }
 }
 
@@ -895,6 +1026,9 @@
     padding-top: 302px;
     padding-bottom: 35px;
     padding-left: 55px;
+  }
+  .button.price-btn:hover {
+    color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
   }
   .div-block-2 {
     width: auto;
@@ -994,13 +1128,23 @@
     margin-left: auto;
   }
   .div-block-9.jarbg {
+    position: relative;
     margin-top: 50px;
+    box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, .05);
   }
   .column-5 {
     display: block;
   }
   .columns-2 {
     display: block;
+  }
+  .zaza-signature {
+    margin-right: 2%;
+  }
+  .text-block-4 {
+    color: hsla(46.666666666666664, 95.58%, 55.69%, 0.90);
+    font-weight: 600;
+    letter-spacing: 0px;
   }
 }
 
@@ -1038,7 +1182,7 @@
     margin-top: -5px;
   }
   .section-2 {
-    padding: 60px 20px;
+    padding: 60px 15px;
   }
   .html-embed {
     height: 229px;
@@ -1067,15 +1211,22 @@
     background-repeat: no-repeat, no-repeat;
   }
   .section-3._2 {
+    padding-top: 0px;
+    padding-bottom: 0px;
     background-color: hsla(227.6470588235294, 0.00%, 0.00%, 1.00);
     background-image: none;
     background-position: 0px 0px;
     background-size: auto;
     background-repeat: repeat;
   }
+  .section-3._3 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
   .paragraph {
     width: auto;
     margin-bottom: 0px;
+    padding-top: 0px;
     padding-bottom: 18px;
     font-family: Lato, sans-serif;
   }
@@ -1099,12 +1250,14 @@
   }
   .div-block-5 {
     width: 100%;
-    padding: 60px 12px 60px 23px;
+    padding: 61px 12px 61px 23px;
     background-color: hsla(227.6470588235294, 0.00%, 0.00%, 1.00);
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .5)));
     background-image: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
   }
   .div-block-5.hide-on-big {
+    padding-top: 0px;
+    padding-bottom: 5px;
     background-color: hsla(227.6470588235294, 0.00%, 0.00%, 1.00);
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .5)));
     background-image: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
@@ -1173,6 +1326,15 @@
     margin-top: 15px;
     margin-right: 8px;
   }
+  .middle-line {
+    background-color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
+  }
+  .bottom-line {
+    background-color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
+  }
+  .top-line {
+    background-color: hsla(46.666666666666664, 95.58%, 55.69%, 1.00);
+  }
   .section-7 {
     padding-right: 40px;
     padding-left: 40px;
@@ -1185,7 +1347,7 @@
     padding-right: 10px;
     padding-left: 10px;
   }
-  .background-video {
+  .video {
     padding-top: 40%;
     padding-right: 10px;
     padding-left: 10px;
@@ -1205,11 +1367,59 @@
     bottom: 0%;
     display: none;
   }
+  .btn {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .06)), to(rgba(0, 0, 0, .06))), url('../images/miel-pattern.svg');
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, .06), rgba(0, 0, 0, .06)), url('../images/miel-pattern.svg');
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, contain;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  .btn.buy-btn {
+    background-image: url('../images/Shape.svg'), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .06)), to(rgba(0, 0, 0, .06))), url('../images/miel-pattern.svg');
+    background-image: url('../images/Shape.svg'), linear-gradient(180deg, rgba(0, 0, 0, .06), rgba(0, 0, 0, .06)), url('../images/miel-pattern.svg');
+    background-position: 6% 50%, 0px 0px, 50% 50%;
+    background-size: 25px, auto, contain;
+    background-repeat: no-repeat, repeat, repeat;
+  }
+  .div-block-8 {
+    margin-top: 50px;
+    background-image: none;
+    background-size: auto;
+  }
+  .div-block-9 {
+    width: 100%;
+    margin-bottom: 80px;
+    background-image: url('../images/jor-zaza.jpg');
+    background-position: 50% 50%;
+    background-size: 700px;
+  }
   .div-block-9.jarbg {
     width: 100%;
     margin-bottom: 46px;
+    background-position: 50% 50%;
+    background-size: 627px;
   }
   .img1 {
+    display: block;
+  }
+  .zaza {
+    border-width: 12px;
+  }
+  .zaza-signature {
+    margin: 45px 19% 30px 0%;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+  .price-tag {
+    width: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 15px;
+    font-weight: 600;
+  }
+  .background-video {
     display: block;
   }
 }
